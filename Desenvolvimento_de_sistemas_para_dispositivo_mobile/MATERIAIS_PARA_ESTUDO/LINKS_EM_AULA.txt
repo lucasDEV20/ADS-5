@@ -1,0 +1,12 @@
+https://github.com/halleygondim/react-native
+
+repositorio do professor 
+
+https://reactnative.dev/docs/environment-setup
+
+react docs
+
+https://htmlcheatsheet.com/js/
+
+link do dicionario js
+
