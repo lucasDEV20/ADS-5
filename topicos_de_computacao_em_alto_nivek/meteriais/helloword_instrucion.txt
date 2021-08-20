@@ -1,3 +1,14 @@
+Hello World com o OpenMP
+Prezados,
+
+
+
+Após a seguirem os passos para instalação do OpenMP, vocês deverão executar o código Hello World abaixo e enviar em anexo o print da execução. 
+
+Detalhe, alterem a mensagem de saída para provar que executaram de fato o código passado.
+
+
+
 // OpenMP header
 
 #include <omp.h>
@@ -13,9 +24,6 @@ int main(int argc, char* argv[])
 {
 
 	int nthreads, tid;
-	//metdo inicial do programa
-	//metdo que o complador procura
-
 
 	// Begin of parallel region
 
@@ -37,7 +45,7 @@ int main(int argc, char* argv[])
 
 			nthreads = omp_get_num_threads();
 
-			printf("ola mundo, eu sou o lucas \n " , nthreads);
+			printf("Number of threads = %d\n", nthreads);
 
 		}
 
