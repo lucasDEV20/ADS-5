@@ -10,3 +10,6 @@ https://htmlcheatsheet.com/js/
 
 link do dicionario js
 
+https://www.w3schools.com/js/js_arrays.asp
+
+https://gist.github.com/ryaneof/0ad24b6a7388a1bddafc
