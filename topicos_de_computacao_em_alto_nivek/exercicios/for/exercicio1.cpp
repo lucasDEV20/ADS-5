@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #define TAM 2 //define constante
-''
+
 int main() {
     int vet1[TAM], vet2[TAM], vet3[TAM*2], i;
 
