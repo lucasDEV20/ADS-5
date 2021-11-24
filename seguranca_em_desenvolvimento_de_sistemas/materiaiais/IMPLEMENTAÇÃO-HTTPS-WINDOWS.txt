@@ -1,0 +1,73 @@
+1) cd \
+
+
+
+2) md certificado
+
+
+
+3) cd Program Files (x86)\Apache Software Foundation\Apache2.2\bin
+
+
+
+4) openssl.exe genrsa -out c:\certificado\chave.key
+
+
+
+5) openssl.exe req -new -key c:\certificado\chave.key -out c:\certificado\chave.csr -config "C:\Program Files (x86)\Apache Software Foundation\Apache2.2\conf\openssl.cnf"
+
+
+
+6) openssl x509 -req -days 365 -in c:\certificado\chave.csr -signkey c:\certificado\chave.key -out c:\certificado\chave.crt
+
+
+
+7) Copie o arquivo c:\Program Files (x86)\Apache Software Foundation\Apache2.2\conf/extra/httpd-ssl para a pasta documento e edite ele como segue abaixo.
+
+
+
+alterar as linhas abaixo:
+
+
+
+SSLCertificateFile "C:/certificado/chave.crt"
+
+SSLCertificateKeyFile "C:/certificado/chave.key"
+
+
+
+Comente a linha
+
+
+
+SSLSessionCache        "shmcb:C:/Program Files (x86)/Apache Software Foundation/Apache2.2/logs/ssl_scache(512000)"
+
+
+
+Copie novamente o arquivo httpd-ssl da pasta documentos para c:\Program Files (x86)\Apache Software Foundation\Apache2.2\conf/extra/httpd-ssl
+
+
+
+8) Copie o arquivo c:\Program Files (x86)\Apache Software Foundation\Apache2.2\conf/httpd para a pasta documento e edite ele como segue abaixo.
+
+
+
+retirar os comentários das linhas abaixo:
+
+
+
+LoadModule ssl_module modules/mod_ssl.so
+
+Include conf/extra/httpd-ssl.conf
+
+
+
+# Copie novamente o arquivo para o local de origem
+
+
+
+9) Reincie o Apache
+
+
+
+10) Abra o navegador e digite: https://localhost
